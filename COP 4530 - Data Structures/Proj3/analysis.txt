@@ -1,0 +1,1 @@
+1) Worst case scenario of the complexity of pop(): O(n)
