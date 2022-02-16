@@ -1,0 +1,1 @@
+The worse case run-time complexity of the 'erase' function is O(n). This is because the function iterates through the array once.
