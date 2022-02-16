@@ -1,0 +1,130 @@
+You have chosen: L = {(a^i)(b^j)(c^k) : k = i * j}
+
+Please insert the tape: Checking tape for correct symbols...
+  .                              	pointer
+| a | a | b | b | c | c | c | c |	tape
+
+  .                              	pointer
+| x | a | b | b | c | c | c | c |	tape
+
+      .                          	pointer
+| x | a | b | b | c | c | c | c |	tape
+
+          .                      	pointer
+| x | a | x | b | c | c | c | c |	tape
+
+          .                      	pointer
+| x | a | x | b | c | c | c | c |	tape
+
+              .                  	pointer
+| x | a | x | b | c | c | c | c |	tape
+
+                  .              	pointer
+| x | a | x | b | x | c | c | c |	tape
+
+              .                  	pointer
+| x | a | x | x | x | c | c | c |	tape
+
+              .                  	pointer
+| x | a | x | x | x | c | c | c |	tape
+
+                  .              	pointer
+| x | a | x | x | x | c | c | c |	tape
+
+                      .          	pointer
+| x | a | x | x | x | x | c | c |	tape
+
+                  .              	pointer
+| x | a | x | x | x | x | c | c |	tape
+
+              .                  	pointer
+| x | a | x | x | x | x | c | c |	tape
+
+          .                      	pointer
+| x | a | x | x | x | x | c | c |	tape
+
+      .                          	pointer
+| x | a | x | x | x | x | c | c |	tape
+
+          .                      	pointer
+| x | a | b | x | x | x | c | c |	tape
+
+              .                  	pointer
+| x | a | b | b | x | x | c | c |	tape
+
+  .                              	pointer
+| x | a | b | b | x | x | c | c |	tape
+
+      .                          	pointer
+| x | x | b | b | x | x | c | c |	tape
+
+          .                      	pointer
+| x | x | x | b | x | x | c | c |	tape
+
+          .                      	pointer
+| x | x | x | b | x | x | c | c |	tape
+
+              .                  	pointer
+| x | x | x | b | x | x | c | c |	tape
+
+                  .              	pointer
+| x | x | x | b | x | x | c | c |	tape
+
+                      .          	pointer
+| x | x | x | b | x | x | c | c |	tape
+
+                          .      	pointer
+| x | x | x | b | x | x | x | c |	tape
+
+                      .          	pointer
+| x | x | x | b | x | x | x | c |	tape
+
+                  .              	pointer
+| x | x | x | b | x | x | x | c |	tape
+
+              .                  	pointer
+| x | x | x | x | x | x | x | c |	tape
+
+              .                  	pointer
+| x | x | x | x | x | x | x | c |	tape
+
+                  .              	pointer
+| x | x | x | x | x | x | x | c |	tape
+
+                      .          	pointer
+| x | x | x | x | x | x | x | c |	tape
+
+                          .      	pointer
+| x | x | x | x | x | x | x | c |	tape
+
+                              .  	pointer
+| x | x | x | x | x | x | x | x |	tape
+
+                          .      	pointer
+| x | x | x | x | x | x | x | x |	tape
+
+                      .          	pointer
+| x | x | x | x | x | x | x | x |	tape
+
+                  .              	pointer
+| x | x | x | x | x | x | x | x |	tape
+
+              .                  	pointer
+| x | x | x | x | x | x | x | x |	tape
+
+          .                      	pointer
+| x | x | x | x | x | x | x | x |	tape
+
+      .                          	pointer
+| x | x | x | x | x | x | x | x |	tape
+
+          .                      	pointer
+| x | x | b | x | x | x | x | x |	tape
+
+              .                  	pointer
+| x | x | b | b | x | x | x | x |	tape
+
+  .                              	pointer
+| x | x | b | b | x | x | x | x |	tape
+
+True
