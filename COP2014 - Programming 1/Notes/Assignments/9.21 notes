@@ -1,0 +1,45 @@
+9/21/2017 
+
+//Practice With "if" Statements
+
+1) write an if statement that prints out "yay" if the user enters the letter A into the ch variable
+
+
+	char ch;
+	cout << "enter a letter ";
+	cin >> ch;
+	
+	if (ch == 'a' || ch == "A")
+		cout << "yay" << endl;
+	else
+		cout << ":(" << endl;
+
+
+
+//Loop Notes
+
+While Loops (has to check permissions before body can be ran)
+	while(num < 1 || num > 100))
+		{
+			cout << "Try again" << endl;
+			cin >> num;
+		}
+		
+	while(i++)
+	
+	
+//do while loops (body is gaurunteed to run at least once)
+	do
+	{
+	
+	
+	}while(       );
+		
+		
+// for Loops
+
+for (initialCondition; testExpression; iterativeStatement)
+	statement
+	
+ex) for (int i; i <= 5; i++)
+		cout << "lit" << endl; 

@@ -1,0 +1,5 @@
+Value vs Reference
+	- Used so you can handle data without having to make copies of every variable you have
+	- if you can, use pass by reference
+
+void student(string & name, int & grade)

@@ -1,0 +1,95 @@
+Midterm II Review
+
+(1) void Function(int & x, const int & y);    //pass by reference is picky
+
+    //main
+    int a = 5;
+    Function( a, 10);   //legal function call
+    cout << a; //10
+
+
+    void Function(int & x, const int & y);
+    {
+      x = x * 2;
+      cout << y;    //10
+    }
+
+
+(2) void thing(double, double &);
+
+
+      //main
+      double a = 3.4;
+      double b = 6;
+      thing( a, b);
+
+      cout << a << " " << b;              //"3.4 7.0"
+
+      void thing(double x, double & y){
+      x++;
+      y++;
+      cout << x << " " << y;              //"4.4 7.0"
+      }
+
+
+###########################################################
+
+- Every cstring is a character array, but not every character array is a cstring
+
+  char arr[] = {'h','e','y','\0'};
+  char arr[] = "hey";
+
+  char arr[80];
+  cin >> arr;     //hello COP3014\n
+  cin.getline(arr, 80);
+  cin.get(arr, 80);
+
+
+###########################################################
+
+char a[20], b[20], c1, c2;
+//But Mr. Krabs, he was #1!\n
+
+cin.get(a, 20, '.');    //"But Mr"  ('.' stays bc .get NOT .getline)
+cin >> c1;              // "."
+c2 = cin.get();         // " "
+cin.getline(b, 20, '#');// "Krabs, he was "  ("1!\n" is left)
+
+
+############################################################
+
+<ctype> library
+
+toupper
+tolower
+todigit
+isalpha
+
+strleng
+strcopy
+strcat
+strcompare
+
+size()
+length()
+
+
+
+############################################################
+
+String Objects Review
+
+#include <string>
+
+string x;
+x = "Whatever I want";
+string y = "yo";
+
+if (x == y)
+
+x = x+y;
+x = x + " " + y;
+
+cout << x[0];
+
+x.size();   x.at(0);

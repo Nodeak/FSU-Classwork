@@ -1,0 +1,21 @@
+#include <cstring>
+______________________
+
+---------String Copy------------
+char arr1[20];
+char arr2[20] = "hello class";
+
+  //arr1 = arr2
+strcopy(arr1, arr2);
+
+---------String Concatenate-----------
+char buffer[80] = "smith"
+strcat(buffer, " food") = smith food
+
+---------String Compare-----------
+Two strings (const arrays) and return an integer that indicates their lexicographic order
+
+char word1[30] = "apple";
+char word2[30] = "apply";
+
+boollean af

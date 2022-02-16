@@ -1,0 +1,93 @@
+Reading Data in from a File and Print out data to a File *wow*
+
+#include <fstream> (file stream)
+
+PRINTING TO FIILE~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//print to file
+
+ofstream dog;		// variable type ofstream
+dog.open("file.txt");	// file will be created for us if it cannot be found
+
+//check opened properly
+if(!dog){
+	cout << "Bad File";
+	exit 0;					//exits program
+	}
+dog << "writing to file\t\t yay";
+dog.close();
+
+
+
+OPENING IN APPEND MODE (DOESNT OVERWRITE)~~~~~~~~~~~~~~~~~~~~~
+
+dog.open("file.txt", ios.app);
+
+
+
+READING THINGS IN FROM A FILE~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	ifstream in;
+	in.open("file.txt");
+	if(!in)
+	{
+		exit(0);
+	}
+	
+	in >> x >> y >> z;
+
+
+
+TEST QUESTION~~~~~~~~~~~~~~~~~~~~~
+
+	ifstream in;
+	in.open("file.txt");
+	
+	int x;
+	int s = 0;
+	
+	if(!in)
+		exit(0);
+	
+	while(!in.eof())			//eof = end of file
+	{
+		in >> x;		//ignores whitespace
+		if(in.fail())	//caused by trailing white space
+			s += x;			// s = s + x
+			
+			
+HARRY POTTER EXAMPLE~~~~~~~~~~~~~~~~
+
+	ifstream in;
+	ofstream out;
+	in.open("harry.txt");
+	out.open("copy.txt");
+	
+	//check files
+	
+	while(!in.eof())
+	{
+		x = in.get(); 		//NOT in >> x because will skip spaces
+		out << x;
+	}
+	
+	
+	
+IGNORE FUNCTION~~~~~~~~~~~
+- works with cin or any other input from screen?
+
+	cin.ignore(); 		//ignores one character from cin
+	cin.ignore(100);	//ignores the next 100 characters from cin
+	cin.ignore(100,'\n')//ignores the next 100 characters OR until next line
+	
+	DONT DO THiS THOUGH
+	
+	cin.ignore(',');	//will look at ascii value for ',' which is 44 and will ignore the next 44 inputs lol
+	
+	
+HOW TO OPEN A FILE THE USER CHOOSES~~~~~~~~~~~~~~~
+
+	char name[20];
+	cin >> name;
+	in.open(name);		//HAS to be a c-string
+						//if string, would have to write as in.open(name.c_str());

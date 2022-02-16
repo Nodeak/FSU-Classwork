@@ -1,0 +1,92 @@
+Overloading and Default Parameters
+
+Function Overloading
+
+	int process(double num);				//function 1
+	int process(char m);					//function 2
+	int process(double num, int position);	//function 3
+	
+Default Values
+	
+	int Computer(int x, int y, int z = 5);				//z has a default value
+	int RunAround(char x, int r = 7, double f = 0.5);	//r and f have default value
+	
+	ex) void printgrade(int grade, int max = 100);
+		//main
+		printgrade(98);
+		
+		void printgrade(int grade, int max)
+		{
+			cout << (grade/(max * 1.0)) * 100;
+		}
+		
+		
+Referece Variables
+
+	int x = 10;
+	int & r = x;			//decleration of reference variable
+							//gives x two names (x and r)
+	x++; 					//both x and r increase by 1
+	cout << r;				//11
+	int & r2 = x;			//can only set equal to normal variable (not reference)
+	
+	ex) 
+		void twice(int &, int &);				//sends in variables as reference variables
+	
+		int main()
+		{
+		int x = 3, y = 5;
+		cout << x << " " << y << endl;			//3 5
+		twice(x,y);
+		cout << x << " " << y << endl;			//6 10
+		
+		return 0;
+		}
+		
+		void twice(int & a, int & b)			//turns a and b into reference variables for x and y, respectively
+		{
+			a = a * 2;
+			b = b * 2;
+			cout << a << " " << b << endl;		//6 10
+		}
+		
+		
+Constant Reference Variables
+	
+	Allows variables to be sent in, not changed, but doesn't make a copy (saves memory)
+	
+	ex)	void stuff(int, int &, const int &);
+		
+		main()
+		{
+			int x = 5;
+			stuff(7,x, 10)
+			
+			
+			
+			
+			
+		}
+		
+		void stuff(int x, int & y, const int & z)
+		{
+			x--;
+			y = y - 3;
+			cout << z;  //can't change z
+		}
+		
+		
+		
+		
+Legal ro Illegal
+
+void fsu(int, int &, const int &);
+int a = 10;
+int b = 6;
+int c = 3;
+
+(1) fsu(3,4,5); 						Illegal (4 needs to be a variable (pass by reference))
+(2) fsu(a,b,6);							Legal
+(3) fsu(a,b,c);							Legal
+(4) cout << fsu(a,b,c);					Illegal (void function)
+(5) fsu(a+4, c, b-7);					Legal

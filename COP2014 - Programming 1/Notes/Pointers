@@ -1,0 +1,55 @@
+-------- POINTERS --------
+- A pointer is a variable that stores a memory address
+- No automatic type conversion happens with pointers (just keep it all the same)
+
+        int x = 10;
+        int * p;      //declared pointer (currently has garbage data)
+        p = &x;       // & mean 'address of'
+                      // int & x    if there is a type in front of the variable, then it is pass by reference
+                      // if there is a variable, then it is a pointer
+        cout << &x;   //1234
+        cout << p;    //1234
+        cout << &p;   //address of pointer (a variable)
+        cout << x;    //10
+        cout << *p;   //10
+        *p = 5;
+        cout << x;    //5
+
+____ Practice ____
+  int x = 3;
+  int * ptr = &x;
+
+  cout << *ptr;         //3
+  cout << ptr;          //5000
+  cout << *ptr * *ptr;  //9
+  x = 10;
+  cout << *ptr;         //10
+  cout << &ptr;         //address of pointer
+  cout << &x;           //5000
+
+  ptr 2 = ptr;
+
+
+
+------- Pointers Cont -------
+
+if you can, set a pointer equal to 0, or null
+int * ptr = 0 //or nullptr;
+              //if you dereference it, program will crash since it is trying to grab data at a nonexisting point
+
+
+____ Practice ____
+
+  int y = 3;
+  int x = 12;
+  int * ptr1 = &x;
+  int * ptr2 = &y;
+
+  cout << x;      //12
+  cout << &x;     //4000
+  cout << ptr2;   //5000
+  cout << &ptr1;  //the address of ptr1
+  ptr2 = ptr1;
+  * ptr2 = 5;
+  cout << x;      //5
+  cout << ptr2 = 0;   //setting ptr2 to null;

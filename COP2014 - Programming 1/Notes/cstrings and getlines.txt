@@ -1,0 +1,59 @@
+C-Strings
+
+  char arr[40];
+  cout << "Full name: ";
+  cin.getline(arr, 40);
+
+__________[Get Line]]_________________
+  char stuff[30];
+  cin.getline(stuff, 30, '4');
+    //cop3014! *enter*
+    //because of the last parameter '4', only 'cop301' would be kept (i think?)
+    //cop301 is printed, ! is kept on the stream, 4 is thrown away
+
+
+___________[Get]____________________
+  char stuff[50];
+  cout << "Enter a sentence: ";
+  cin.get(stuff, 50, '0');
+    //spooky stuff *enter*
+    //sp is printed, ooky stuff is kept on the stream
+
+__________[Examples]__________
+  char x, y, z;     //a b c
+  x = cin.get();    //stores one character, stores a
+  y = cin.get();    //stores the space
+  z = cin.get();    //stores b
+
+
+  char a[40];
+  char b[40];
+  char ch;
+  char ch2;
+
+  //Ghosts oh no!
+
+  cin.get(a, 40, 's');      //Gho (sts oh no!)
+  cin >> ch;                //s   (ts oh no!)
+  ch2 = cin.get();          //t (s oh no!)
+  cin.getline(b, 40, '!');  //s oh no (!)
+
+
+____________[Upper Case and Lower Case]___________
+  #include <ctype>
+
+  char name[30];
+  cout << "enter your first name";
+
+  cin.getline(name, 30);
+
+  name[0] = toupper(name[0]);    //does not change by itself, have to set equal to itself
+
+
+  ~~~~~~~~~~~~~(Example)~~~~~~~~~~~~
+  char name[50];
+  cout << "Enter your name: " << endl;
+  cin.getline(name, 50);
+
+  for(int i = 0; i < 50; i++)       //for(int i = 0; i < strlen(name); i ++)
+    name[i] = toupper(name[i]);

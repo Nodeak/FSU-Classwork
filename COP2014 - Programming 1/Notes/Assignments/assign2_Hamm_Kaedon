@@ -1,0 +1,161 @@
+COP3343-Fall 2017	Assignment 2 Solution	Due: Friday Sep 22, 2017
+
+Section: 01
+Name: Kaedon Hamm
+
+Question 1a: pico .plan
+Question 1b: cat .plan
+	khamm@shell.cs.fsu.edu:~>cat .plan
+	
+	Name:   Kaedon Hamm
+	Major:  Computer Science BS
+	Email:  kah16h@my.fsu.edu
+	Dessert:Pizookies
+Question 1c: cat -n .plan
+Question 1d: more .plan
+Question 1e: touch -c -t 1512010630 .plan
+	khamm@shell.cs.fsu.edu:~>date -r .plan
+	Tue Dec  1 06:30:00 EST 2015
+
+Question 2a: mkdir tempDir
+	     pico road
+	khamm@shell.cs.fsu.edu:~/tempDir>ls -la
+	total 12
+	drwx------ 2 khamm CS-Majors 4096 Sep 21 17:24 .
+	drwx------ 7 khamm CS-Majors 4096 Sep 21 17:19 ..
+	-rw------- 1 khamm CS-Majors  716 Sep 21 17:24 road
+Question 2b: chmod 700 road
+	khamm@shell.cs.fsu.edu:~/tempDir>ls -l
+	total 4
+	-rwx------ 1 khamm CS-Majors 716 Sep 21 17:24 road
+Question 2c: chmod uo+rx road
+	khamm@shell.cs.fsu.edu:~/tempDir>ls -l
+	total 4
+	-rwx---r-x 1 khamm CS-Majors 716 Sep 21 17:24 road
+Question 2d: pwd -P
+	khamm@shell.cs.fsu.edu:~>pwd -P
+	/home/majors/khamm
+Question 2e: rm road
+	khamm@shell.cs.fsu.edu:~/tempDir>ls -l
+	total 0
+	     rmdir tempDir
+	khamm@shell.cs.fsu.edu:~>ls -l
+	total 12
+	-rw------- 1 khamm CS-Majors  330 Sep 21 16:28 assign2_Hamm_Kaedon
+	drwx------ 9 khamm CS-Majors 4096 Sep  6 11:12 Mail
+	-rwxr-xr-x 1 khamm CS-Majors 1792 Aug 30 16:25 README
+
+Question 3a: touch File_1.txt
+	     touch File_1.dat
+	     touch File_1-1.txt
+	     touch File_1-2.dat
+	     touch File_2.txt
+	     touch File_2-1.txt
+	     touch File_2.dat
+	     touch File_2-2.dat
+	     touch File_3.txt
+	     touch File_3-1.txt
+	     touch File_3.dat
+	     touch File_3-2.dat
+	     touch File_4.txt
+	     touch File_4-1.txt
+	     touch File_4.dat
+	     touch File_4-2.dat
+	khamm@shell.cs.fsu.edu:~>ls 
+	assign2_Hamm_Kaedon  File_1.txt    File_2.txt    File_3.txt    File_4.txt
+	File_1-1.txt         File_2-1.txt  File_3-1.txt  File_4-1.txt  Mail
+	File_1-2.dat         File_2-2.dat  File_3-2.dat  File_4-2.dat  README
+	File_1.dat           File_2.dat    File_3.dat    File_4.dat
+Question 3b: mkdir COP3353ClassFiles
+	     cp -r *.txt COP3353ClassFiles
+	     cp -r *.dat COP3353ClassFiles
+Question 3c: cd COP3353ClassFiles
+	     ls *.txt
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>ls *.txt 
+	File_1-1.txt  File_2-1.txt  File_3-1.txt  File_4-1.txt
+	File_1.txt    File_2.txt    File_3.txt    File_4.txt
+Question 3d: ls *.d*
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>ls *.d*
+	File_1-2.dat  File_2-2.dat  File_3-2.dat  File_4-2.dat
+	File_1.dat    File_2.dat    File_3.dat    File_4.dat
+Question 3e: ls File_*-*
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>ls File_*-*
+	File_1-1.txt  File_2-1.txt  File_3-1.txt  File_4-1.txt
+	File_1-2.dat  File_2-2.dat  File_3-2.dat  File_4-2.dat
+Question 4a: cp /home/faculty/gaitrosd/COP3353ClassFiles/rubaiyat.txt .
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>ls 
+	File_1-1.txt  File_1.txt    File_2.dat    File_3-2.dat  File_4-1.txt  File_4.txt
+	File_1-2.dat  File_2-1.txt  File_2.txt    File_3.dat    File_4-2.dat  rubaiyat.txt
+	File_1.dat    File_2-2.dat  File_3-1.txt  File_3.txt    File_4.dat
+Question 4b: wc -w rubaiyat.txt
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>wc -w rubaiyat.txt 
+	2538 rubaiyat.txt
+Question 4c: wc -l rubaiyat.txt
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>wc -l rubaiyat.txt 
+	453 rubaiyat.txt
+Question 4d: ls -lh
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>ls -hl
+total 16K
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_1-1.txt
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_1-2.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_1.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_1.txt
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_2-1.txt
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_2-2.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_2.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_2.txt
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_3-1.txt
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_3-2.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_3.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_3.txt
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_4-1.txt
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_4-2.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_4.dat
+	-rw------- 1 khamm CS-Majors   0 Sep 21 19:26 File_4.txt
+	-rwx------ 1 khamm CS-Majors 14K Sep 21 20:00 rubaiyat.txt
+Question 4e: mv rubaiyat.txt rubaiyatofomarkayyam.txt
+	khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>ls
+	File_1-1.txt  File_2-1.txt  File_3-1.txt  File_4-1.txt  rubaiyatofomarkayyam.txt
+	File_1-2.dat  File_2-2.dat  File_3-2.dat  File_4-2.dat
+	File_1.dat    File_2.dat    File_3.dat    File_4.dat
+	File_1.txt    File_2.txt    File_3.txt    File_4.txt
+
+Question 5a: du COP3353CLassFiles/
+	khamm@shell.cs.fsu.edu:~>du COP3353ClassFiles/
+	20      COP3353ClassFiles/
+Question 5b: du -a COP3353ClassFiles/
+	khamm@shell.cs.fsu.edu:~>du -a COP3353ClassFiles/
+	0       COP3353ClassFiles/File_1.txt
+	16      COP3353ClassFiles/rubaiyatofomarkayyam.txt
+	0       COP3353ClassFiles/File_1.dat
+	0       COP3353ClassFiles/File_3-2.dat
+	0       COP3353ClassFiles/File_2.txt
+	0       COP3353ClassFiles/File_2.dat
+	0       COP3353ClassFiles/File_4-1.txt
+	0       COP3353ClassFiles/File_3-1.txt
+	0       COP3353ClassFiles/File_2-1.txt
+	0       COP3353ClassFiles/File_1-2.dat
+	0       COP3353ClassFiles/File_2-2.dat
+	0       COP3353ClassFiles/File_4-2.dat
+	0       COP3353ClassFiles/File_3.txt
+	0       COP3353ClassFiles/File_4.txt
+	0       COP3353ClassFiles/File_4.dat
+	0       COP3353ClassFiles/File_1-1.txt
+	0       COP3353ClassFiles/File_3.dat
+	20      COP3353ClassFiles/
+Question 5c: cal -3
+	khamm@shell.cs.fsu.edu:~>cal -3
+	     August 2017         September 2017         October 2017    
+	Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+	       1  2  3  4  5                  1  2   1  2  3  4  5  6  7
+	 6  7  8  9 10 11 12   3  4  5  6  7  8  9   8  9 10 11 12 13 14
+	13 14 15 16 17 18 19  10 11 12 13 14 15 16  15 16 17 18 19 20 21
+	20 21 22 23 24 25 26  17 18 19 20 21 22 23  22 23 24 25 26 27 28
+	27 28 29 30 31        24 25 26 27 28 29 30  29 30 31           
+Question 5d: date
+	khamm@shell.cs.fsu.edu:~>date
+	Thu Sep 21 21:14:53 EDT 2017
+Question 5e: date "+%m/%d/%y"
+	khamm@shell.cs.fsu.edu:~>date "+%m/%d/%y"
+	09/21/17
+

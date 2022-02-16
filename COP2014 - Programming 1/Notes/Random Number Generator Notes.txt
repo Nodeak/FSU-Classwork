@@ -1,0 +1,138 @@
+Random Number Generators
+
+- need to include #include <cstdlib>
+- need to include #include <ctime>
+- seed random number generator once at the beginning of main();
+
+- use computers clock to generate actual "random" numbers
+
+ex)
+
+	#include <iostream>
+	#include <cstdlib>
+	#include <ctime>
+	using namespace std;
+
+	int main();
+	{
+		srand((unsigned)time(0));			// ONLY DO ONCE and ((unsigned int)time(0))
+		
+		cout << rand() << endl;
+		
+		
+		return 0;
+	}
+	
+	
+ex) How to restrict rand to a certain number range
+
+	#include <iostream>
+	#include <cstdlib>
+	#include <ctime>
+	using namespace std;
+
+	int main();
+	{
+		srand((unsigned)time(0));			// ONLY DO ONCE and ((unsigned int)time(0))
+		
+		cout << rand()%6+1 << endl;
+		
+		
+		return 0;
+	}
+	
+	
+ex) Game made together. Roll dice, once for us and once for computer, count wins and losses.
+
+	#include <iostream>
+	#include <cstdlib>
+	#include <ctime>
+	using namespace std;
+
+	int main();
+	{
+		int wins, losses, ties;
+		int user, cpu;
+		wins = losses = ties = 0;
+		bool again;
+		srand((unsigned)time(0));			// ONLY DO ONCE and ((unsigned int)time(0))
+		
+		do
+		{
+			//play the game
+			user = rand() % 6 + 1;
+			cout << "Rolling the die for the user: " << user << endl;
+			cpu = rand() % 6 + 1;
+			cout << "Rolling the die for the cpu: " << cpu << endl;
+			
+			//compare
+			if(user > cpu)
+			{
+				cout << "YOU WIN" << endl;
+				wins++;
+			}
+			else if(user < cpu)
+			{
+				cout << "you lose :(" << endl;
+				losses++;
+			}
+			else
+			{
+				cout << "TiE!" << endl;
+				ties++;
+			}
+			
+			
+			//do you want to play again?
+			cout << "Would you like to play again? (0 no or 1 yes) > ";
+			cin >> again;
+		
+		}while(again);				//simply while true or while false (since boolean. can also be while(again == true);
+			
+		cout << "Number of wins: " << wins << endl;
+		cout << "Number of losses: " << losses << endl;
+		cout << "Number of ties: " << ties << endl;
+		
+		
+		cout << rand() << endl;
+		
+		
+		return 0;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

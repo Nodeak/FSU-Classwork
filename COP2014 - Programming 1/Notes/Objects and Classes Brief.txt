@@ -1,0 +1,29 @@
+Objects and Classes (brief intro)
+
+- An object is a variable that contains data and has functions associated with it.
+	-contains attributes
+	-associated behaviors
+	
+- Classes
+
+
+Member functions and flags
+
+	- setf()
+	- unsetf() -- the "unset flags", turns off one of the flags
+	- precision() -- sets the precision for floating-point values to a specific number of significant digits after the decimal point
+	- width() -- used to specify the "field width" for the next item that is output. Number of character positions is specified as a parameter
+	- fill() -- used to specify the fill character to be used to pad out extra space in a field (when using width())
+	
+	
+Stream Manipulators
+(include <iomanip>
+	
+	- a symbol or function that is used by placing it on the right side of the insertion operator <<
+	- cout << endl; //endl is a stream manipulator
+	- setw() sets width
+	- setfill() sets fill charactor to whatever is in the parenthesis
+	- setiosflags()
+	- others lol
+	
+Common Stream FLags and Manipultors

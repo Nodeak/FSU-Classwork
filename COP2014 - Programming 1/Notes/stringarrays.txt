@@ -1,0 +1,57 @@
+Cstrings and Arrays
+
+Always include this library if using string variable
+	#include <string>
+	
+ex) string firstname = "Kaedon";
+
+----Comparing Strings----
+== exact same
+> & < compares it lexigraphically
+
+
+----Inputing whole lines----
+s
+ex) string name;
+	cout << "Enter name: ";
+	getline(cin, name);
+	
+----[] Operator----
+
+ex) string name = "Kaedon"
+	
+	for(int i = 0; i < 6; i++)
+	{
+		cout << name[i];
+		if(name[i] == " ")
+			//example of a reason for lastname or something lol idk
+			
+			
+----Arrays----
+
+how to input a matrix
+
+int arr[2][3] --->	  ___0___1___2___
+					0 |____|___|____|
+					1 |____|___|____|
+					
+how to call an array within a function
+
+//declare
+	void print(int arr[], int S);
+
+//main
+	const int SIZE = 10;
+	int arr[SIZE];
+	
+	print(arr, SIZE);
+	
+//define
+	void print(int arr[], int S)		//no copy is made BUT original array will be changed (like pass by reference)
+	{
+		for(int i = 0; i < S; i++)
+			cout << arr[i] << " ";					
+	}
+	
+
+	

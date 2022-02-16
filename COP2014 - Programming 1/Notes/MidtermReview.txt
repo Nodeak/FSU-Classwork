@@ -1,0 +1,54 @@
+TEST REVIEW
+
+{
+		//some function declerations
+	void thing(int, double);
+	double stuff();
+	
+		//variable
+	int i1 = 5;
+	double d1 = 3.456;
+}
+
+//LEGAL OR ILLEGAL
+
+(1) thing(i1, d1);					LEGAL
+(2) thing(i1, i1);					LEGAL (promotes int to a double for us)
+(3) stuff;							ILLEGAL (stuff();)
+(4) d1 = -6;						LEGAL
+(5) cout << stuff();				LEGAL
+(6) cout << thing(3, 5.67);			ILLEGAL
+(7) i1 = d1 + 5;					ILLEGAL
+
+
+
+*** Switch Statement ***
+
+int x;
+cout << "Sup, enter a [b]alue";
+cin >> x;
+
+switch(x)
+{
+	case 1:
+			cout << "1!";
+			break;
+	case 2:
+			cout << "2!";
+			break;
+	case 3:
+			cout << "3!";
+			break;
+	default:
+			cout << "Nah fam u suk";
+{
+
+
+** Question Example **
+
+int x = 3;
+int y = ++x + x++;
+a) 7
+b) 6
+c) 8				//Correct
+d) None of the Above

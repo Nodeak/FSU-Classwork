@@ -1,0 +1,96 @@
+Structures BAYBEEEEE
+
+
+
+********** SIMPLE EXAMPLE
+
+#include <iostream>
+using namespace std;
+
+struct Fraction
+{
+	int n;
+	int d;
+
+
+};
+//function dec.
+
+int main()
+{
+	Fraction x;
+	x.n = 5;
+	x.d = 7;
+	
+	Fraction y,z;
+	Fraction f = {1,3};
+	
+	return 0;
+}
+
+************* ANOTHER EXAMPLE
+
+struct Student
+{
+	char name[40];
+	int hw1;
+	int hw2;
+	int t1;
+	int t2;
+};
+
+//main
+	Student x;
+	
+	
+************** Struct within a Struct
+
+struct Date
+{
+	int m;
+	int d;
+	int y;
+};
+struct Employee
+{
+	char fnmae[40];
+	char lname[40];
+	Date hireDate;
+	Date birthDate;
+};
+
+Employee x;
+x.birthDate.m = 7;		//specifically makes x's birthDate month 7
+
+
+************* on projector thingy
+
+arr[2].d = 3;
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PART 2 beeotch ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**************** Structures and the Assignemnt operator
+
+Struct Student
+{
+	char name[40];
+	double gpa;
+	int fgrade;
+};
+
+//main
+	Student a, b;
+	a.fgrade = 98;
+	b.fgrade = 92;
+	
+	Student c = a;	//makes another object in the same struct the exact same as 'a'
+	Student d = a+b //DOES NOT WORK
+	
+	int x = a.fgrade + b.fgrade //OKAY
+	
+	if( a > b )	//DOES NOT WORK
+	

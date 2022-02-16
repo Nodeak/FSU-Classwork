@@ -1,0 +1,99 @@
+[Arrays]
+
+int hw1, hw2, hw3, ...; takes too much
+
+INSTEAD...
+
+int hws[7];			//(variable type) (name)[size]
+					// all integers are stored consecutively
+					// 0-6 when calling though, hws[0]-hws[6]
+					
+hws[2] = 100;		//element 2 = 100
+hws[5] = 105;		//element 3 = 105;
+
+int x = 1;
+hws[x] = 95;		//element 1 is = 95
+
+
+ex) int main()
+	{
+		int arr[5] = { 2, 5, 6, 7, 3 };
+		
+		cout << arr[3];			//3
+		
+		return 0;
+	}
+	
+	
+ex) int main()
+	{
+		int arr[] = { 1, 2, -3, 6, 7, 9};			//creates an array of 6 elements
+		
+		
+		
+----Arrays----
+
+how to input a matrix
+
+int arr[2][3] --->	  ___0___1___2___
+					0 |____|___|____|
+					1 |____|___|____|
+					
+how to call an array within a function
+
+//declare
+	void print(int arr[], int S);
+
+//main
+	const int SIZE = 10;
+	int arr[SIZE];
+	
+	print(arr, SIZE);
+	
+//define
+	void print(int arr[], int S)		//no copy is made BUT original array will be changed (like pass by reference)
+	{
+		for(int i = 0; i < S; i++)
+			cout << arr[i] << " ";					
+	}
+	
+	
+	
+	'
+	
+----More on Arrays----
+
+//declare an array of type int size 10 and set its contents to random #'s between 5 and 10
+
+int arr[10];
+
+for(int i = 0; i < 10; i++)
+	arr[i] = rand()%6+5				// rand()%6 = 0 thru 5; rand()%6+5 = 5 thru 10
+									//						rand()%(something w 5 & 10) + min
+									
+									
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+char c[5] = {'a','e','i','o','u'}
+
+
+----C-Strings----
+
+	= char arrays that end w/ '\0' <- null char
+
+char str[7] = {'K','a','e','d','o','n','\0'} 	//must have null character at the end to be a c-string
+												//okay to omit the size as long as you initialize the rest of it
+cout << str << endl; 					//prints out until it finds a null character
+
+char str2[] = "KAEDON";					//no need to put in a null character or {} (if putting in a size, include room for null character)
+
+
+
+
+char name[40];
+
+cout << "Hey, enter your name: ";
+cin >> name;							// null (\0) is automatically inputted for them. Rest are uninitialized
+
+
+*****Use const before array in function when defining it********
