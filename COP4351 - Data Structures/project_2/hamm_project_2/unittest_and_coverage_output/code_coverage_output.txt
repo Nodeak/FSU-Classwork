@@ -1,0 +1,52 @@
+khamm@linprog6.cs.fsu.edu:~/Algos/2_project/cop4531_project_2>make coverage
+touch output/l1_metric.txt
+touch output/out.txt
+g++ -std=c++11 -o code_cov_main -fprofile-arcs -ftest-coverage -fPIC upsample.cpp
+g++ -std=c++11 -o code_cov_test -fprofile-arcs -ftest-coverage unittest/UnitTest.cpp -L ./googletest/build/lib/ -I ./googletest/googletest/include -lgtest -lpthread
+./code_cov_main
+Upsampled array -> output/out.txt
+L1 Metric -> output/l1_metric.txt
+./code_cov_test
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from algorithm
+[ RUN      ] algorithm.nearestNeighbor
+[       OK ] algorithm.nearestNeighbor (0 ms)
+[ RUN      ] algorithm.bilinear
+[       OK ] algorithm.bilinear (0 ms)
+[----------] 2 tests from algorithm (1 ms total)
+
+[----------] 1 test from test
+[ RUN      ] test.l1_metric
+[       OK ] test.l1_metric (0 ms)
+[----------] 1 test from test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 3 tests.
+~/.local/bin/gcovr
+------------------------------------------------------------------------------
+                           GCC Code Coverage Report
+Directory: .
+------------------------------------------------------------------------------
+File                                       Lines    Exec  Cover   Missing
+------------------------------------------------------------------------------
+googletest/googletest/include/gtest/gtest-message.h
+                                               1       1   100%   
+googletest/googletest/include/gtest/gtest-printers.h
+                                              20       0     0%   210,213,295,301,322-323,402,404,429-430,617,626,781-782,850,854,890-893
+googletest/googletest/include/gtest/gtest.h
+                                              20       9    45%   333-334,337,427,435,440-441,522,1522,1529,1549
+googletest/googletest/include/gtest/internal/gtest-internal.h
+                                              23      18    78%   454,530,532,551,553
+googletest/googletest/include/gtest/internal/gtest-param-util.h
+                                              29       0     0%   93,95,170,297,299-300,302-303,311,313-314,316-317,319-321,323-324,333-335,337,340-344,348,353
+googletest/googletest/include/gtest/internal/gtest-port.h
+                                               4       0     0%   970,1112,1114,1120
+unittest/UnitTest.cpp                         27      27   100%   
+upsample.cpp                                  27      27   100%   
+upsample_algos.cpp                            35      35   100%   
+------------------------------------------------------------------------------
+TOTAL                                        186     117    62%
+------------------------------------------------------------------------------
+khamm@linprog6.cs.fsu.edu:~/Algos/2_project/cop4531_project_2>

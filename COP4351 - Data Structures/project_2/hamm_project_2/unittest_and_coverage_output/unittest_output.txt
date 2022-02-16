@@ -1,0 +1,18 @@
+khamm@linprog6.cs.fsu.edu:~/Algos/2_project/cop4531_project_2>./test
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from algorithm
+[ RUN      ] algorithm.nearestNeighbor
+[       OK ] algorithm.nearestNeighbor (0 ms)
+[ RUN      ] algorithm.bilinear
+[       OK ] algorithm.bilinear (0 ms)
+[----------] 2 tests from algorithm (0 ms total)
+
+[----------] 1 test from test
+[ RUN      ] test.l1_metric
+[       OK ] test.l1_metric (0 ms)
+[----------] 1 test from test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 3 tests.
