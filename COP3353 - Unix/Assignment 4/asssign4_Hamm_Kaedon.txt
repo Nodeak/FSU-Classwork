@@ -1,0 +1,88 @@
+Question 1: vi .plan
+			cat .plan
+		khamm@shell.cs.fsu.edu:~>cat .plan
+
+		Name:   Kaedon Hamm
+		Major:  Computer Science BS
+		Email:  kah16h@my.fsu.edu
+		Dessert:Pizookies
+
+Question 2: who
+	khamm@shell.cs.fsu.edu:~>who
+	kuffer   pts/0        2017-10-20 15:51 (c-68-59-126-225.hsd1.fl.comcast.net)
+	yuwang   pts/2        2017-10-18 10:24 (brightwell.cs.fsu.edu)
+	asyed    pts/3        2017-10-20 15:17 (172.58.171.169)
+	washingt pts/4        2017-10-20 15:06 (c-69-246-168-221.hsd1.fl.comcast.net)
+	maddox   pts/5        2017-10-20 15:19 (65.153.49.130)
+	cody     pts/6        2017-10-20 16:04 (host-173-230-92-25.fltapsf.clients.pavlovmedia.com)
+	harris   pts/7        2017-10-20 15:25 (104-190-185-193.lightspeed.dybhfl.sbcglobal.net)
+	bronson  pts/8        2017-10-07 15:25 (cen4020.cs.fsu.edu)
+	escobedo pts/9        2017-10-20 15:06 (10.135.251.24)
+	wwang    pts/10       2017-10-10 14:34 (wwang2.cs.fsu.edu)
+	amaral   pts/11       2017-10-20 13:24 (10.132.68.159)
+	pulz     pts/12       2017-10-20 15:39 (10.135.248.81)
+	pulz     pts/13       2017-10-20 15:39 (10.135.248.81)
+	khamm    pts/14       2017-10-20 16:04 (216.162.154.90)
+	asyed    pts/15       2017-10-20 14:39 (172.58.171.169)
+	arenasvi pts/16       2017-10-20 14:31 (c-73-42-40-57.hsd1.fl.comcast.net)
+	jtaylor  pts/17       2017-10-20 16:08 (ip-12-39-52-196.chicago.us.northamericancoax.com)
+	sjohnson pts/18       2017-10-20 15:35 (c-68-35-251-78.hsd1.fl.comcast.net)
+	turbessi pts/19       2017-10-20 14:12 (128.186.64.218)
+	nbaker   pts/21       2017-10-20 13:47 (73.104.45.11)
+	bbrown   pts/22       2017-10-20 14:31 (69.80.128.156)
+	fagbamil pts/23       2017-10-20 15:42 (c-68-63-41-166.hsd1.fl.comcast.net)
+	burmeste pts/24       2017-10-20 12:25 (192.168.122.190)
+	ziemba   pts/25       2017-10-20 14:44 (10.135.171.201)
+	burmeste pts/26       2017-10-20 15:09 (192.168.122.190)
+	batista  pts/27       2017-10-20 13:33 (97.103.107.58)
+	fagbamil pts/28       2017-10-20 16:04 (c-68-63-41-166.hsd1.fl.comcast.net)
+	kuffer   pts/29       2017-10-20 15:36 (c-68-59-126-225.hsd1.fl.comcast.net)
+	saperez  pts/30       2017-10-20 14:59 (199.44.180.215)
+	arenasvi pts/31       2017-10-20 14:31 (c-73-42-40-57.hsd1.fl.comcast.net)
+	musingo  pts/32       2017-10-20 15:37 (10.132.148.159)
+	cconroy  pts/34       2017-10-20 14:56 (71.220.213.213)
+	talmon   pts/35       2017-10-20 15:00 (216.162.154.65)
+	gingras  pts/36       2017-10-20 13:35 (wg-dhcp174d169d086.secure.wireless.fsu.edu)
+	asyed    pts/37       2017-10-20 16:05 (172.58.171.169)
+	pulz     pts/38       2017-10-20 16:05 (10.135.248.81)
+	stock    pts/39       2017-10-20 16:10 (10.132.230.165)
+	bbrown   pts/42       2017-10-20 14:00 (69.80.128.156)
+	saperez  pts/47       2017-10-20 14:20 (199.44.180.215)
+	escobedo pts/50       2017-10-20 14:57 (10.135.251.24)
+	
+Question 3: mesg n
+
+Question 4: chmod 754 *
+
+Question 5: chmod u+rwx *
+			chmod g+rx *
+			chmod o+r *
+			
+Question 6: cd ~khamm
+
+Question 7: cd ~/public_html/Classes/COP3353/Assignments/Assigment4
+
+Question 8: TENEX/TOPS C_Shell
+
+Question 9: 11000011010
+
+Question 10: 61A
+
+Question 11: 42
+
+Question 12: 204
+
+Question 13: ls -al *.txt | sort -k 5
+		khamm@shell.cs.fsu.edu:~/COP3353ClassFiles>ls -al *.txt | sort -k 5
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_1-1.txt
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_1.txt
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_2-1.txt
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_2.txt
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_3-1.txt
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_3.txt
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_4-1.txt
+		-rw------- 1 khamm CS-Majors     0 Sep 21 19:26 File_4.txt
+		-rwx------ 1 khamm CS-Majors 13393 Oct  4 16:10 test.txt
+		-rwx------ 1 khamm CS-Majors 13394 Sep 21 20:00 rubaiyatofomarkayyam.txt
+		-rw------- 1 khamm CS-Majors    47 Oct  4 12:10 z.txt
+

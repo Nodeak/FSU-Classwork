@@ -1,0 +1,33 @@
+COP3343-Fall 2017      
+Assignment 3 Solution
+Due: Friday Oct 6, 2017
+Section: 01
+Name: Kaedon Hamm
+
+Question 1 (25 points)
+Question 1a: 4dd
+Question 1b: /cat\|Cat
+Question 1c: 6x
+Question 1d: i
+Question 1e: u
+
+Question 2 (25 points)
+Question 2a: Forces the save a quit function, writing over the previous file.		:wq!
+Question 2b: Searches and replaces all 'cat' with 'Cat'						:%s/cat/Cat/g
+Question 2c: Finds the second 'a' in the line										2fa
+Question 2d: Copies the entire line (p pastes it)									yy
+Question 2e: Takes you to the first line											gg
+
+Question 3 (25 points)
+Question 3a: ^r
+Question 3b: ^w
+Question 3c: ^e
+Question 3d: ^v
+Question 3e: ^x^s
+
+Question 4 (25 points)
+Question 4a: Undos your most recent command								^x u
+Question 4b: Moves back one character									^b
+Question 4c: Pastes text from current cursor position					^y
+Question 4d: Exits emacs without prompting to save if in scratch mode	^x^c
+Question 4e: Moves to the end of the line								^e
