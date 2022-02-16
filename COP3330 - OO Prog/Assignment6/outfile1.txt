@@ -1,0 +1,27 @@
+Student Grade Summary
+---------------------
+
+
+
+English Class
+Student                                 Final     Final     Letter
+Name                                    Exam      Avg       Grade
+-------------------------------------------------------------
+Marvin Dipwart                          88        80.3      B
+James Kirk                              88        80.8      B
+
+
+History Class
+Student                                 Final     Final     Letter
+Name                                    Exam      Avg       Grade
+-------------------------------------------------------------
+Joe Schmuckatelli                       90        84.25     B
+Monica Lewinsky                         78        71.4      C
+
+
+Math Class
+Student                                 Final     Final     Letter
+Name                                    Exam      Avg       Grade
+-------------------------------------------------------------
+Bugs Bunny                              93        94.83     A
+Jimmy Crack Corn                        68        65.33     D
